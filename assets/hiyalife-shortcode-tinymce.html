@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Hiyalife lifeline configuration</title>
+
+    <link rel="stylesheet" href="http://hiyalife.com/v2/css/hiyalife.css?v=1.57.31">
+    <link rel="stylesheet" href="http://hiyalife.com/v2/css/hiyalife-responsive.css?v=1.57.31">
+    <script type="text/javascript">
+    // <![CDATA[
+        !function(){
+            var data = window.top.hiyalifeShortcodeDialogData
+              , loadJS = function (path){
+                    document.write('<script type="text/javascript" src="'+ path +'"><\/script>');
+                }
+              , loadCSS = function (path) {
+                    document.write('<link rel="stylesheet" type="text/css" href="'+ path +'" \/>');
+                };
+            // Load CSS and JS
+            loadJS(data.includesUrl + 'js/jquery/jquery.js');
+            loadJS(data.includesUrl + 'js/tinymce/tiny_mce_popup.js');
+            loadJS("./widget_wizard.js");
+            loadCSS("./bootstrap.css");
+        }();
+    // ]]> 
+    </script>
+    <script type="text/javascript">
+    //<![CDATA[
+var lits = {"language":"en","alertify.cancel":"Cancel","widget.configurator.brand":"Brand","widget.configurator.height":"Height","widget.configurator.hiyacode":"Hiyacode","widget.configurator.id":"ID","widget.configurator.preview":"Preview","widget.configurator.showsubmit":"Show 'submit your story' button","widget.configurator.story":"Story","widget.configurator.storyid":"Story id","widget.configurator.tag":"Tag","widget.configurator.title":"Widget Config","widget.configurator.tilesview":"Tiles view","widget.configurator.type":"Type","widget.configurator.userlife":"User life","widget.configurator.user":"User","widget.configurator.username":"User name","widget.configurator.width":"Width"};
+    //]]>
+</script>
+<script type="text/javascript">
+    //<![CDATA[
+
+	var connections = "";
+	
+    //]]>
+</script>
+<style type="text/css">
+    .widgetwizard, .widgetwizard > .row, .widgetwizard > .row > .col-md-4, .widgetwizard > .row > .col-md-4 form, .widgetwizard > .row > .col-md-4 form fieldset{height: 100%;}
+    .widgetwizard .form-horizontal .form-group{position:relative;display:inline-block;vertical-align:top;width: 200px;height:60px;margin:0;padding:0;text-align: left;}
+    .widgetwizard .form-horizontal .form-group.small{width: 100px;}
+    .widgetwizard .form-horizontal .form-group > label{position:absolute;display: block;width: 100%;padding-left:5px;text-align: left;}
+    .widgetwizard .form-horizontal .form-group > input{position: absolute;top:22px;left:0;width:100%;}
+    .widgetwizard .form-horizontal .form-group > #submit{position:absolute;top:22px;height: 38px;}
+    .widgetwizard .form-horizontal .form-group > #usertypecontainer{position: absolute;top:22px;left:0;width:100px;height:36px;padding:0;}
+    .widgetwizard .form-horizontal #submitstoyrgroup{display: inline-block;width: auto;}
+    .widgetwizard .form-horizontal #tilesgroup{display: inline-block;width: auto;}
+    .widgetwizard .form-horizontal #preview-zone{width:100%;height:480px;padding: 0;}
+    .widgetwizard .form-horizontal #preview-zone #preview-container{width:100%;max-height:480px;padding: 0;}
+    .widgetwizard .form-horizontal #preview-zone #preview-container object{position: absolute;top: 0;height: 480px;}
+    .widgetwizard .form-horizontal #insertCode{position: absolute;top: 100%;left: 100%;margin-top: -47px;margin-left: -155px;z-index: 4;height: 35px;}
+</style>
+</head>
+<body>
+<div class="container widgetwizard">
+    <div class="row">
+        <div class="col-md-4">
+            <form class="form-horizontal hlf_form">
+                <fieldset>
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-1 col-xs-9" id="objectidlabel" for="objectid">User</label>
+                        <input id="objectid" name="objectid" type="text" placeholder="User name" class="input-medium col-md-5 col-sm-3" value="hiyalife" required="">
+                    </div>
+                    <div class="form-group col-md-6 small">
+                        <div id="usertypecontainer" class="nopadleft col-md-2 col-sm-2">
+                            <div class="select">
+                                <div></div>
+                                <select id="usertype" name="usertype" class="form-control">
+                                    <option value="User">User</option>
+                                    <option selected="selected" value="Brand">Brand</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6 small">
+                        <label class="control-label col-md-7 " for="width">Width</label>
+                        <input id="width" name="width" type="text" placeholder="px" class="col-md-5 ">
+                    </div>
+                    <div id="heightgroup" class="form-group col-md-6 small">
+                        <label class="control-label col-md-7 " for="height">Height</label>
+                        <input id="height" name="height" type="text" placeholder="px" class="col-md-5 ">
+                    </div>
+                    <div class="form-group col-md-6 small">
+                        <button id="submit" name="submit" class="btn btn-primary">Preview</button>
+                    </div>
+                    <br>
+                    <div id="submitstoyrgroup" class="checkbox col-md-offset-3 col-md-9">
+                        <label>
+                        <input type="checkbox" checked="checked"> Show 'submit your story' button</label>
+                    </div>
+                    <div id="tilesgroup" class="checkbox col-md-offset-3 col-md-9">
+                        <label>
+                        <input type="checkbox"> Tiles view</label>
+                    </div>
+                    <div id="preview-zone" class="col-xs-9 col-md-6">    
+                        <div id="preview-container" class="col-xs-9 col-md-9">
+                            <object height="420" width="100%" data="http://hiyalife.com/widget/brand/hiyalife"></object>                
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="controls">
+                            <button id="insertCode" name="insertCode" class="">Insert shortcode</button>
+                        </div>
+                	</div>
+                </fieldset>
+            </form>
+        </div>
+
+    </div>
+    
+</div>
+</body>
+</html>    
